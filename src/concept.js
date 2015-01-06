@@ -78,7 +78,7 @@ var SnakeGame = (function (_super) {
 })(Game);
 var game = new SnakeGame();
 var snake = new Snake([
-    new SnakeBody({
+    new SnakeSegment({
         location: { x: 50, y: 50 }
     })
 ]);
