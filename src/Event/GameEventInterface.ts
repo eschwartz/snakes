@@ -1,0 +1,3 @@
+interface GameEventInterface {
+  location:GameLocationInterface;
+}

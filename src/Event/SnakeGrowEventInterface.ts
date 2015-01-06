@@ -1,0 +1,3 @@
+interface SnakeGrowEventInterface extends GameEventInterface {
+
+}
