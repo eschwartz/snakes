@@ -2,6 +2,8 @@ import SnakeGame = require('./Game/SnakeGame');
 import SnakeSegment = require('./Entity/SnakeSegment');
 import Snake = require('./EntityGroup/Snake');
 import Food = require('./Entity/Food');
+import SnakeRenderer = require('./Renderer/SnakeRenderer');
+import FoodRenderer = require('./Renderer/FoodRenderer');
 
 var game = new SnakeGame();
 
@@ -17,20 +19,8 @@ var foodItems = new FoodItems([
   })
 ]);
 
-var snakeRenderer:RendererInterface = {
-  render: function(snake:SnakeSegment, ctx:CanvasRenderingContext2D) {
-
-  }
-};
-
-var foodRenderer:RendererInterface = {
-  render: function(food:Food, ctx:CanvasRenderingContext2D) {
-
-  }
-};
-
-game.addEntityGroup(snake, snakeRenderer, {});
-game.addEntityGroup(foodItems, foodRenderer, {});
+game.addEntityGroup(snake, SnakeRenderer, {});
+game.addEntityGroup(foodItems, FoodRenderer, {});
 
 
 game.addGroupCollisionEvent(snake, foodItems, function(evt:CollisionEventInterface) {

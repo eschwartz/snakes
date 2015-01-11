@@ -20,7 +20,7 @@ class Game {
 
     _.each(this.groupsMeta, (meta:GameEntityGroupMeta) => {
       this.renderEntityGroup(meta.entityGroup, meta.renderer);
-      meta.entityGroup.forEach(entity => entity.onTick());
+      meta.controller.onTick();
     });
   }
 
